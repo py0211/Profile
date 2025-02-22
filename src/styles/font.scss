@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Black';
+  src: url('/src/assets/fonts/NotoSansTC-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'ExtraBold';
+  src: url('/src/assets/fonts/NotoSansTC-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Bold';
+  src: url('/src/assets/fonts/NotoSansTC-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'SemiBold';
+  src: url('/src/assets/fonts/NotoSansTC-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url('/src/assets/fonts/NotoSansTC-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Regular';
+  src: url('/src/assets/fonts/NotoSansTC-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Light';
+  src: url('/src/assets/fonts/NotoSansTC-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'ExtraLight';
+  src: url('/src/assets/fonts/NotoSansTC-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Thin';
+  src: url('/src/assets/fonts/NotoSansTC-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@mixin Format($font-family: 'Regular', $font-size: 16px) {
+  font-family: $font-family;
+  font-size: $font-size;
+}
