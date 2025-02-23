@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import Home from '@/pages/Root'
+import Home from '@/pages/Home'
 
 const RootRoutes = () => {
   return (

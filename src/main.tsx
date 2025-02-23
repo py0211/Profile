@@ -2,12 +2,16 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.scss'
 import { BrowserRouter } from 'react-router-dom'
-import Root from '@/routes/Routes'
+import RootRoutes from '@/routes/Routes'
+
+const basename = import.meta.env.VITE_BASENAME || "/";
+
+console.log("当前 basename:", basename);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/Profile">
-      <Root />
+    <BrowserRouter basename={basename}>
+      <RootRoutes />
     </BrowserRouter>
   </StrictMode>,
 )
