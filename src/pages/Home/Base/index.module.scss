@@ -1,0 +1,100 @@
+@use '@/styles/color' as *;
+@use '@/styles/font' as *;
+
+@mixin BackgroundCircle {
+  position: absolute;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  background: $primary3;
+  opacity: 0.3;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  .content {
+    width: 80vw;
+    max-width: $breakpoint;
+    position: relative;
+    z-index: 1;
+
+    .title {
+      position: absolute;
+      @include Format('Bold', 60px);
+      top: -68px;
+      right: -68px;
+      opacity: 1;
+      animation: typing 2.5s ease forwards;
+    }
+
+    img {
+      width: 100%;
+      height: 40vh;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .msg {
+      position: absolute;
+      @include Format('SemiBold');
+      left: 0;
+      bottom: -30px;
+      animation: typing 2s ease forwards;
+    }
+  }
+
+  .backgroundCircle1 {
+    @include BackgroundCircle;
+    top: -150px;
+    left: -100px;
+  }
+
+  .backgroundCircle2 {
+    @include BackgroundCircle;
+    top: -200px;
+    left: 100px;
+  }
+
+  .backgroundCircle3 {
+    @include BackgroundCircle;
+    bottom: -150px;
+    right: -100px;
+  }
+}
+
+@keyframes typing {
+  from {
+    right: 0px;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 905px) {
+  .container {
+    .content {
+      .title {
+        @include Format('Bold', 28px);
+        top: -36px;
+        right: 0;
+      }
+
+      .msg {
+        @include Format('SemiBold', 12px);
+        bottom: -24px;
+      }
+    }
+  }
+
+  @keyframes typing {
+    from {
+      right: -28px;
+      opacity: 0;
+    }
+  }
+}

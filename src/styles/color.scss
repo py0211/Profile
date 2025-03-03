@@ -8,16 +8,20 @@
   }
 }
 
-$primary: #c2734e;
-$primary1: #d19d87;
-$primary2: #e8c8be;
+$primary: var(--primary);
+$primary1: var(--primary1);
+$primary2: var(--primary2);
+$primary3: var(--primary3);
 
-$secondary: #d7be9f;
-$secondary1: #f5e9e6;
-$secondary2: #faf4f2;
+$secondary: var(--secondary);
+$secondary1: var(--secondary1);
+$secondary2: var(--secondary2);
 
-$dark: #4c484f;
-$dark1: #797b99;
+$dark: var(--dark);
+$dark1: var(--dark1);
+$dark2: var(--dark2);
 
-$white: #FFF;
-$black: #000;
+$white: var(--white);
+$black: var(--black);
+
+$breakpoint: var(--breakpoint905);

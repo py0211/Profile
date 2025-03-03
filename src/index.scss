@@ -1,10 +1,20 @@
-@use './styles/color' as *;
-@use './styles/font' as *;
+@use '@/styles/color' as *;
+@use '@/styles/font' as *;
 
 body {
   margin: 0;
-  font-family: 'NotoSansTC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    'NotoSansTC',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,12 +22,61 @@ body {
   width: 100%;
   height: 100vh;
   color: $dark;
+  overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
-  height: 100%;
+  height: auto;
   padding: 0px;
   margin: 0px;
   @include Format();
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: transparent;
+
+    &:hover {
+      background-color: $primary1;
+      cursor: pointer;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: none;
+  }
+
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+
+    &:hover {
+      background: $secondary2;
+      cursor: pointer;
+    }
+  }
+}
+
+:root {
+  --primary: #6a6b65;
+  --primary1: #a89985;
+  --primary2: #cfc1ab;
+  --primary3: #efe9db;
+
+  --secondary: #d7be9f;
+  --secondary1: #f5e9e6;
+  --secondary2: #faf4f2;
+
+  --dark: #354449;
+  --dark1: #4c484f;
+  --dark2: #797b99;
+
+  --white: #fff;
+  --black: #000;
+
+  --breakpoint905: 905px;
 }

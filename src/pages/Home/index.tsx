@@ -1,8 +1,12 @@
+import styles from './index.module.scss'
+
+import Base from './Base'
+
 const Home = () => {
   return (
-    <>
-      Hello
-    </>
+    <div className={styles.container}>
+      <Base />
+    </div>
   )
 }
 
