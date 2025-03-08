@@ -1,12 +1,21 @@
 import styles from './index.module.scss'
 
+import RootContextProvider from '@/contexts/RootContext'
+
+import Lamp from '@/components/Lamp'
+
 import Base from './Base'
+import About from './About'
 
 const Home = () => {
   return (
-    <div className={styles.container}>
-      <Base />
-    </div>
+    <RootContextProvider>
+      <div className={styles.container}>
+        <Base />
+        <About />
+        <Lamp />
+      </div>
+    </RootContextProvider>
   )
 }
 

@@ -1,0 +1,3 @@
+export enum LOCAL_STORAGE_KEY {
+  COLOR_THEME = 'COLOR_THEME',
+}

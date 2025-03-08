@@ -2,7 +2,9 @@
 @use '@/styles/font' as *;
 
 .container {
-  background: $white;
+  background: $background;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
 }

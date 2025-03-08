@@ -1,0 +1,66 @@
+@use '@/styles/color' as *;
+@use '@/styles/font' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 10%;
+  z-index: 1;
+  cursor: pointer;
+  animation: swing 5s infinite;
+  transform-origin: top;
+
+  .line {
+    width: 2px;
+    height: 100px;
+    background: $primary;
+    margin: 0;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    margin-top: -1px;
+    box-shadow: 0px 0px 800px 80px #faeb83;
+    background: #faeb8399;
+    cursor: pointer;
+  }
+
+  &:active {
+    .line {
+      height: 120px;
+      transition: 100ms;
+    }
+
+    .dot {
+      background: $primary;
+      box-shadow: unset;
+    }
+  }
+}
+
+[data-theme='DARK'] {
+  .container {
+    .dot {
+      box-shadow: 0px 0px 70px 20px #faeb83;
+      background: #faeb8370;
+    }
+  }
+}
+
+@keyframes swing {
+  20% {
+    transform: skewX(1deg);
+  }
+  50% {
+    transform: skewX(-1deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}

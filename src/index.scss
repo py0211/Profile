@@ -18,10 +18,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $white;
+  background: $background;
   width: 100%;
   height: 100vh;
-  color: $dark;
+  color: $third;
   overflow-x: hidden;
 }
 
@@ -31,6 +31,7 @@ body {
   padding: 0px;
   margin: 0px;
   @include Format();
+  cursor: default;
 
   &::-webkit-scrollbar {
     width: 7px;
@@ -62,6 +63,12 @@ body {
 }
 
 :root {
+  --white: #fff;
+  --black: #000;
+  --breakpoint905: 905px;
+}
+
+:root[data-theme='LIGHT'] {
   --primary: #6a6b65;
   --primary1: #a89985;
   --primary2: #cfc1ab;
@@ -71,12 +78,26 @@ body {
   --secondary1: #f5e9e6;
   --secondary2: #faf4f2;
 
-  --dark: #354449;
-  --dark1: #4c484f;
-  --dark2: #797b99;
+  --third: #354449;
+  --third1: #4c484f;
+  --third2: #797b99;
 
-  --white: #fff;
-  --black: #000;
+  --background: #fff;
+}
 
-  --breakpoint905: 905px;
+:root[data-theme='DARK'] {
+  --primary: #6a6b65;
+  --primary1: #a89985;
+  --primary2: #cfc1ab;
+  --primary3: #efe9db;
+
+  --secondary: #d7be9f;
+  --secondary1: #f5e9e6;
+  --secondary2: #faf4f2;
+
+  --third: #354449;
+  --third1: #4c484f;
+  --third2: #797b99;
+
+  --background: #000;
 }
